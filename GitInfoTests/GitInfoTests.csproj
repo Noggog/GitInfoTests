@@ -1,19 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<IsPackable>true</IsPackable>
+		<Description>ParentLibrary</Description>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="GitInfo" Version="2.1.2">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="GitInfo" Version="2.1.2" PrivateAssets="all" />
+		<PackageReference Include="NuGetizer" Version="*" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\ParentLibrary\ParentLibrary.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\ParentLibrary\ParentLibrary.csproj" />
+	</ItemGroup>
 
 </Project>
