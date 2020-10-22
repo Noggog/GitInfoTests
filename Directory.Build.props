@@ -1,7 +1,10 @@
 <Project>
   <PropertyGroup> 
     <GitInfoReportImportance Condition="$(Configuration) == 'Release'">high</GitInfoReportImportance> 
-  </PropertyGroup> 
+  </PropertyGroup>
+
+  <!-- To be redefined by GitInfo after restore. -->
+  <Target Name="GitVersion" />
 	 
   <Target Name="SetVersion" 
 		  BeforeTargets="GetAssemblyVersion;GetPackageVersion"
